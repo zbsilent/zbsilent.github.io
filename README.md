@@ -39,5 +39,5 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 ## INDEX
 
 - [DEVDOC](devdoc/README.md)
-  - [Spring](devdoc/Spring.md)
+  - [Spring](devdoc/spring.md)
   - 
