@@ -4,7 +4,7 @@
   const catCard = document.querySelector('.cat-card');
   const catLayer = document.createElement('div');
   catLayer.className = 'cat-layer';
-  catLayer.innerHTML = '<img src="./assets/cat-head.png" alt="一只会随鼠标轻轻晃动的猫"><span class="cat-shadow" aria-hidden="true"></span>';
+  catLayer.innerHTML = '<img src="./assets/cat.png" alt="一只会随鼠标轻轻转头的猫"><span class="cat-shadow" aria-hidden="true"></span>';
   if (visual && !visual.querySelector('.cat-layer')) visual.appendChild(catLayer);
 
   const move = (event) => {
@@ -15,7 +15,8 @@
       visual.style.setProperty('--iris-y', `${y * 4}px`);
       visual.style.setProperty('--cat-x', `${x * 10}px`);
       visual.style.setProperty('--cat-y', `${y * 3}px`);
-      visual.style.setProperty('--cat-r', `${x * 5}deg`);
+      visual.style.setProperty('--cat-r', `${x * 3.2}deg`);
+      visual.style.setProperty('--cat-yaw', `${x * 8}deg`);
       if (!reduced && typeof gsap !== 'undefined') gsap.to(visual, { rotation: x * .5, duration: .35, overwrite: 'auto', ease: 'power2.out' });
     }
     if (catCard) {
