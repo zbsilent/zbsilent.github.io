@@ -31,14 +31,16 @@ python3 -m http.server 8000
 ## 素材与动效
 
 - `assets/character.png`：人物主视觉。
+- `assets/character-base-ai.png`：通过图像编辑处理的人物无虹膜底图。
 - `assets/character-sheet.png`：人物设定卡片。
 - `assets/cat.png`：动物主题卡片。
 - `assets/cat-head.png`：从猫蓝本裁切的首屏动物头部层。
+- `assets/iris-left.png` / `assets/iris-right.png`：从人物蓝本提取的原始虹膜层。
 - `script-v2.js`：使用 GSAP 与 ScrollTrigger 实现首屏入场、滚动视差、分段 reveal；使用独立坐标层实现眼球视线和猫头鼠标跟随；支持 `prefers-reduced-motion`。
 
 ## 设计修订说明
 
 - 页面各区统一使用米白纸张底色，只用深色和橙色作为内容卡片与强调色，不再让整块任务背景与全局主题割裂。
-- 人物眼球相对于人物图片自身定位，避免出现漂浮在脸外的黑点。
+- 人物底图先移除固定虹膜，再叠加从原图提取的左右虹膜；眼球相对于人物图片自身定位，避免重复眼睛或漂浮黑点。
 - 猫头使用独立裁切层，随鼠标做低幅度旋转和位移；人物眼球同步向鼠标方向移动。
 - 旧版本遗留的狗素材已移出项目，不参与构建或发布。

@@ -28,8 +28,8 @@
     const x = (event.clientX / window.innerWidth - .5) * 2;
     const y = (event.clientY / window.innerHeight - .5) * 2;
     if (visual) {
-      visual.style.setProperty('--eye-x', `${x * 8}px`);
-      visual.style.setProperty('--eye-y', `${y * 4}px`);
+      visual.style.setProperty('--iris-x', `${x * 7}px`);
+      visual.style.setProperty('--iris-y', `${y * 4}px`);
       visual.style.setProperty('--cat-x', `${x * 10}px`);
       visual.style.setProperty('--cat-y', `${y * 3}px`);
       visual.style.setProperty('--cat-r', `${x * 5}deg`);
