@@ -26,4 +26,11 @@ python3 -m http.server 8000
 
 ## 当前页面
 
-当前版本是一个最小可访问首页，后续可以继续增加页面结构、样式和功能。
+当前版本是一个带有滚动叙事、卡片布局和轻量动效的个人主页，参考了 `oiloil.org` 的编辑式排版、分段编号、作品卡片和滚动入场节奏，但使用了独立文案、结构和素材。
+
+## 素材与动效
+
+- `assets/character.png`：人物主视觉。
+- `assets/character-sheet.png`：人物设定卡片。
+- `assets/cat.png`：动物主题卡片。
+- `script.js`：使用 GSAP 与 ScrollTrigger 实现首屏入场、滚动视差、分段 reveal 和旋转装饰线；支持 `prefers-reduced-motion`。
