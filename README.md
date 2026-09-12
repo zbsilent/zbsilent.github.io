@@ -36,7 +36,7 @@ python3 -m http.server 8000
 - `assets/cat.png`：动物主题卡片。
 - `assets/cat-head.png`：从猫蓝本裁切的首屏动物头部层。
 - `assets/iris-left.png` / `assets/iris-right.png`：从人物蓝本提取的原始虹膜层。
-- `script-v2.js`：使用 GSAP 与 ScrollTrigger 实现首屏入场、滚动视差、分段 reveal；使用独立坐标层实现眼球视线和猫头鼠标跟随；支持 `prefers-reduced-motion`。
+- `script-v2.js`：使用 GSAP 与 ScrollTrigger 实现首屏入场、滚动视差、分段 reveal；使用原生 Pointer Events 驱动独立虹膜层和猫头跟随，因此即使 GSAP CDN 暂时不可用，鼠标交互仍然可用；支持 `prefers-reduced-motion`。
 
 ## 设计修订说明
 
