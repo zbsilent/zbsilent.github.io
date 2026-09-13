@@ -2,10 +2,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const visual = document.querySelector('.hero-visual');
   const catCard = document.querySelector('.cat-card');
-  const catLayer = document.createElement('div');
-  catLayer.className = 'cat-layer';
-  catLayer.innerHTML = '<img src="./assets/cat.png" alt="一只会随鼠标轻轻转头的猫"><span class="cat-shadow" aria-hidden="true"></span>';
-  if (visual && !visual.querySelector('.cat-layer')) visual.appendChild(catLayer);
+  const catLayer = visual?.querySelector('.cat-layer');
 
   const move = (event) => {
     const x = (event.clientX / window.innerWidth - .5) * 2;
